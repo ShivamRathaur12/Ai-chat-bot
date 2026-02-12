@@ -45,7 +45,7 @@ console.log(err);
    }
    finally{
         chatContainer.scrollTo({top:chatContainer.scrollHeight,behavior:"smooth"});
-        image.src="images/image.svg";  
+        image.src="image.svg";  
     image.classList.remove("choose");
     user.file={};
    }
@@ -66,7 +66,7 @@ function createChatBox(html,classes){
 function handlechatResponse(usermessage){
     user.message=usermessage;
     let html=`<div class="user-chat-box">
-        <img src="images/user.png" alt="" id="userImage" width="8%">
+        <img src="user.png" alt="" id="userImage" width="8%">
         <div class="user-chat-area">
         ${user.message}
         ${user.file.data?`<img src="data:${user.file.mime_type};base64,${user.file.data}" class="chooseimg"/>` : ""}
@@ -76,9 +76,9 @@ function handlechatResponse(usermessage){
         chatContainer.appendChild(userChatBox);
         chatContainer.scrollTo({top:chatContainer.scrollHeight,behavior:"smooth"})
         setTimeout(()=>{
-        let html1=`<img src="images/ai.png" alt="" id="Ai-img" width="5%">
+        let html1=`<img src="ai.png" alt="" id="Ai-img" width="5%">
     <div class="ai-chat-area">
-        <img src="images/loading.gif" alt="" class="load" width="5%"> 
+        <img src="loading.gif" alt="" class="load" width="5%"> 
     </div> `
     let aiChatBox=createChatBox(html1,"ai-chat-box");
     chatContainer.appendChild(aiChatBox);
